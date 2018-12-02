@@ -9,5 +9,11 @@ These are my solutions expressed in the [Go](https://golang.org/) programming la
 See the solutions to the day 1 puzzles:
 
 `
-$ cat input.txt | go run day1/day1.go;
+$ cat day1/input.txt | go run day1/day1.go;
+`
+
+See the solutions to the day 2 puzzles:
+
+`
+$ cat day2/input.txt | go run day2/day2.go
 `
