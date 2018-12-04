@@ -6,20 +6,14 @@ These are my solutions expressed in the [Go](https://golang.org/) programming la
 
 # Getting Started
 
-See the solutions to the day 1 puzzles:
+See the solutions to the day (N) puzzles:
+
+`
+$ cat day(N)/input.txt | go run day(N)/day(N).go
+`
+
+For example, for day 1:
 
 `
 $ cat day1/input.txt | go run day1/day1.go
-`
-
-See the solutions to the day 2 puzzles:
-
-`
-$ cat day2/input.txt | go run day2/day2.go
-`
-
-See the solutions to the day 3 puzzles:
-
-`
-$ cat day3/input.txt | go run day3/day3.go
 `
