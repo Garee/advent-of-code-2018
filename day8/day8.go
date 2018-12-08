@@ -69,9 +69,31 @@ func sumMetadata(node Node) (sum int) {
 	return sum
 }
 
+func computeValue(node Node) (val int) {
+	if len(node.children) > 0 {
+		for _, m := range node.metadata {
+			if m == 0 {
+				continue
+			}
+			idx := m - 1
+			if idx < 0 || idx >= len(node.children) {
+				continue
+			}
+			child := node.children[idx]
+			val += computeValue(child)
+		}
+	} else {
+		for _, m := range node.metadata {
+			val += m
+		}
+	}
+	return val
+}
+
 func main() {
 	nums := toIntArr(readLicenseFile())
 	root, _ := buildTree(nums[0], nums[1], nums[2:])
 	sum := sumMetadata(root)
-	fmt.Println(sum)
+	val := computeValue(root)
+	fmt.Println(sum, val)
 }
